@@ -1,7 +1,10 @@
 using UnityEngine;
+using System;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    public event Action OnPlayerJumped;
+
     private Rigidbody playerRigidbody;
 
     [Header("References")]
@@ -148,6 +151,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void SetPlayerJumping()
     {
+        OnPlayerJumped?.Invoke();
+
         playerRigidbody.linearVelocity = new Vector3(playerRigidbody.linearVelocity.x, 0f, playerRigidbody.linearVelocity.z);
 
         playerRigidbody.AddForce(transform.up * jumpForce, ForceMode.Impulse);
