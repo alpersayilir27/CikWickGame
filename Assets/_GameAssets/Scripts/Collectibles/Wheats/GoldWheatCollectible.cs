@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GoldWheatCollectible : MonoBehaviour
+public class GoldWheatCollectible : MonoBehaviour, ICollectibles
 {
     [SerializeField] private PlayerController playerController;
     [SerializeField] private float movementIncreaseSpeed;
