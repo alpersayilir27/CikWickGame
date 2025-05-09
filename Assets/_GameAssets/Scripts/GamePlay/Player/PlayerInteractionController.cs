@@ -5,9 +5,9 @@ public class PlayerInteractionController : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
-         if (other.gameObject.TryGetComponent<ICollectibles>(out ICollectibles collectible))
+         if (other.gameObject.TryGetComponent<ICollectible>(out var collectible))
          {
-             collectible.Collect();
+            collectible.Collect();
          }
     }
 }

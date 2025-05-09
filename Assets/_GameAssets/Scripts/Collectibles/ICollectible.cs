@@ -1,5 +1,5 @@
 
-public interface ICollectibles
+public interface ICollectible
 {
     void Collect(); 
 }

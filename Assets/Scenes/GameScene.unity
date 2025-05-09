@@ -297,8 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1276976470}
-  movementDecreaseSpeed: -25
-  resetBoostDuration: 5
+  wheatDesignSO: {fileID: 11400000, guid: 2aeb588694b61dd4b9afd5a16399d057, type: 2}
 --- !u!1 &74553248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,9 +1033,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7765e6344f54ff74baaef1a53ed37264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wheatDesignSO: {fileID: 11400000, guid: ae490e83affd2564abcb9221018e6cdc, type: 2}
   playerController: {fileID: 1276976470}
-  movementIncreaseSpeed: 15
-  resetBoostDuration: 5
 --- !u!1 &769951132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1704,8 +1702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1276976470}
-  ForceIncrease: 8
-  resetBoostDuration: 5
+  wheatDesignSO: {fileID: 11400000, guid: f7128e0c2aa196e408a38110d2b8b1d1, type: 2}
 --- !u!1 &1316854897
 GameObject:
   m_ObjectHideFlags: 0
