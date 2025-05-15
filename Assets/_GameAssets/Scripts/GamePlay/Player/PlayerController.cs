@@ -4,6 +4,7 @@ using System;
 public class PlayerController : MonoBehaviour
 {
     public event Action OnPlayerJumped;
+    public event Action<PlayerState> OnPlayerStateChanged;
 
     private Rigidbody playerRigidbody;
 
@@ -107,6 +108,7 @@ public class PlayerController : MonoBehaviour
         if (newState != currentState)
         {
             stateController.ChangeState(newState);
+            OnPlayerStateChanged?.Invoke(newState);
         }
 
         Debug.Log(newState);
