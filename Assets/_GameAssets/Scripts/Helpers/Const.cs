@@ -1,12 +1,16 @@
 
 public class Const
 {
+   public struct SceneNames
+   {
+      public const string GAME_SCENE = "GameScene";
+   }
    public struct PlayerAnimations
    {
-    public const string IS_MOVING = "IsMoving";
-    public const string IS_JUMPING = "IsJumping";
-    public const string IS_SlIDING = "IsSliding";
-    public const string IS_SLIDING_ACTIVE = "IsSlidingActive";
+      public const string IS_MOVING = "IsMoving";
+      public const string IS_JUMPING = "IsJumping";
+      public const string IS_SlIDING = "IsSliding";
+      public const string IS_SLIDING_ACTIVE = "IsSlidingActive";
    }
 
    public struct WheatTypes
