@@ -1,10 +1,23 @@
+using System;
 using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
+    public static HealthManager Instance { get; private set; }
+
+    public event Action OnPlayerDeath;
+    [Header("References")]
+    [SerializeField] private PlayerHealthUI playerHealthUI;
+
+    [Header("Settings")]
     [SerializeField] private int maxHealth = 3;
 
     private int currentHealth;
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -16,11 +29,11 @@ public class HealthManager : MonoBehaviour
         if (currentHealth > 0)
         {
             currentHealth -= damageAmount;
-            //UI animate damage
+            playerHealthUI.AnimateDamage();
 
             if (currentHealth <= 0)
             {
-                //Player dies
+                OnPlayerDeath?.Invoke();
             }
         }
     }
