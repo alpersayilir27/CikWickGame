@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
             PlayerState.Jump => airMultiplier,
             _ => 1f
         };
-        
+
         playerRigidbody.AddForce(movementDirection.normalized * movementSpeed * forceMultiplier, ForceMode.Force);
     }
 
@@ -214,12 +214,27 @@ public class PlayerController : MonoBehaviour
     {
         jumpForce = startingJumpForce;
     }
-    
+
     public Rigidbody GetPlayerRigidbody()
     {
         return playerRigidbody;
     }
 
+    public bool CanCatChase()
+    {
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, playerHeight * 0.5f + 0.2f, groundLayer))
+        {
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer(Const.Layers.FLOOR_LAYER))
+            {
+                return true;
+            }
+            else if (hit.collider.gameObject.layer == LayerMask.NameToLayer(Const.Layers.GROUND_LAYER))
+            {
+                return false;
+            }
+        }
+        return false;
+    }
     #endregion
 
 
