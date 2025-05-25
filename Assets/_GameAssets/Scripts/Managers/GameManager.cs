@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int maxEggCount = 5;
     [SerializeField] private float delay;
     private int currentEggCount;
+    private bool isCatCatched;
 
     private GameState currentGameState;
 
@@ -40,8 +41,13 @@ public class GameManager : MonoBehaviour
 
     private void CatController_OnCatCathed()
     {
-        playerHealthUI.AnimateDamageForAll();
-        StartCoroutine(OnGameOver());
+        if (!isCatCatched)
+        {
+            playerHealthUI.AnimateDamageForAll();
+            StartCoroutine(OnGameOver());
+            CameraShake.Instance.ShakeCamera(1.5f, 1.25f, 0.5f);
+            isCatCatched = true;
+        }
     }
 
     private void HealthManager_OnPlayerDeath()

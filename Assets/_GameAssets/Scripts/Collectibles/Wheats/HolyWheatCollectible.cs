@@ -23,6 +23,7 @@ public class HolyWheatCollectible : MonoBehaviour, ICollectible
         playerController.SetJumpForce(wheatDesignSO.IncreaseDecreaseMultiplier, wheatDesignSO.ResetBoostDuration);
         playerStateUI.PlayBoosterUIAnimations(playerBoosterTransform, playerBoosterImage, playerStateUI.GetHolyBoosterWheatImage(), wheatDesignSO.ActiveSprite,
         wheatDesignSO.PassiveSprite, wheatDesignSO.ActiveWheatSprite, wheatDesignSO.PassiveWheatSprite, wheatDesignSO.ResetBoostDuration);
+        CameraShake.Instance.ShakeCamera(0.5f, 0.5f);
         Destroy(gameObject);
     }
 }
