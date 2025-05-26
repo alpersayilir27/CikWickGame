@@ -15,16 +15,20 @@ public class LosePopup : MonoBehaviour
 
     private void OnEnable()
     {
+        BackgroundMusic.Instance.SetMusicMute(false);
+        AudioManager.Instance.Play(SoundType.LoseSound);
         timerText.text = timerUI.GetFinalTime();
         tryAgainButton.onClick.AddListener(OnOneMoreButtonClicked);
         MainMenuButton.onClick.AddListener(() =>
         {
+            AudioManager.Instance.Play(SoundType.TransitionSound);
             TransitionManager.Instance.LoadLevel(Const.SceneNames.MENU_SCENE);
         });
     }
 
     private void OnOneMoreButtonClicked()
     {
+        AudioManager.Instance.Play(SoundType.TransitionSound);
         TransitionManager.Instance.LoadLevel(Const.SceneNames.GAME_SCENE);
     }
 }
