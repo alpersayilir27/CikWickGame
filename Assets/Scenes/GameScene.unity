@@ -281,8 +281,8 @@ MonoBehaviour:
   catController: {fileID: 0}
   playerController: {fileID: 1276976470}
   playerTransform: {fileID: 1276976469}
-  defaultSpeed: 5
-  chaseSpeed: 7
+  defaultSpeed: 6
+  chaseSpeed: 8
   patrolRadius: 28
   waitTime: 6.75
   maxDestinationAttempts: 50
