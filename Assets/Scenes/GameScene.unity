@@ -10094,7 +10094,13 @@ MonoBehaviour:
   soundButton: {fileID: 280723009}
   resumeButton: {fileID: 62151116}
   mainMenuButton: {fileID: 1883158127}
+  musicActiveSprite: {fileID: 21300000, guid: 572d015c0604b0b49b09265a1072b1d4, type: 3}
+  musicPassiveSprite: {fileID: 21300000, guid: 5f1b2ea972b168448b4c057a28eb7f2a, type: 3}
+  soundActiveSprite: {fileID: 21300000, guid: b70c31f4b7494cf40ad2dfcb839120cf, type: 3}
+  soundPassiveSprite: {fileID: 21300000, guid: 11231ee54f9eb5948b175a2a69b0d050, type: 3}
   animationDuration: 0.3
+  isMusicActive: 1
+  isSoundActive: 1
 --- !u!1 &1838931632 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9041498942958628794, guid: 69ef6ec9a0720ab4181a382ad028a657, type: 3}
